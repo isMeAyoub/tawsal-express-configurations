@@ -15,5 +15,14 @@ spring:
         format_sql: true
     open-in-view: false
     show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
