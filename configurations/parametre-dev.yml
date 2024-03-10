@@ -21,6 +21,15 @@ spring:
     port: 5672
     username: guest
     password: guest
+# this is for eureka client to register the service
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
 
 # this if for the actuator endpoints to be exposed
 management:
@@ -28,3 +37,10 @@ management:
     web:
       exposure:
         include: "*"
+
+# this is for service info to be shown in the eureka server
+info:
+  app:
+    name: parametre-service
+    description: "This service is for the parametre management"
+    version: 1.0.0

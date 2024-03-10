@@ -1,13 +1,13 @@
 server:
   port: 8761
-
-eurka:
+# this is for the eureka server to not register itself
+eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: false
     fetch-registry: false
-
+# this is for the actuator endpoints to be exposed
 management:
   endpoints:
     web:
