@@ -15,7 +15,6 @@ spring:
         format_sql: true
     open-in-view: false
     show-sql: true
-  # rabbitmq for messaging between microservices and config server
   rabbitmq:
     host: localhost
     port: 5672
