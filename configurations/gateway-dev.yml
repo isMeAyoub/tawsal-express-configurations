@@ -3,17 +3,19 @@ server:
 spring:
   cloud:
     gateway:
+      # this is for the routes to be configured in the gateway
       routes:
         - id: parametre-service
           uri: lb://PARAMETRE
           predicates:
             - Path=/api/v1/ville-ramassages/**
+  # this is for certificate validation
   security:
     oauth2:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:7080/realms/master/protocol/openid-connect/certs
-
+# this is for the actuator endpoints to be exposed
 management:
   endpoints:
     web:
@@ -25,13 +27,13 @@ management:
   info:
     env:
       enabled: true
-
+# this is for service info to be shown in the eureka server
 info:
   app:
     name: GatewayServer
-    description: "This service is for the gateway server"
+    description: "This service is for the ayoub"
     version: 1.0.0
-
+# this is for eureka client to register the service
 eureka:
   instance:
     prefer-ip-address: true
