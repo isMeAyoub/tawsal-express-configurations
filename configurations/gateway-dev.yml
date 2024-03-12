@@ -1,5 +1,36 @@
 server:
   port: 8089
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: parametre-service
+          uri: lb://PARAMETRE
+          predicates:
+            - Path=/api/v1/ville-ramassages/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:7080/realms/master/protocol/openid-connect/certs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: GatewayServer
+    description: "This service is for the gateway server"
+    version: 1.0.0
 
 eureka:
   instance:
