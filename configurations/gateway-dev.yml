@@ -9,7 +9,6 @@ spring:
           uri: lb://PARAMETRE
           predicates:
             - Path=/api/v1/ville-ramassages/**
-            - Path=/api/v1/zones/**
   # this is for certificate validation
   security:
     oauth2:
