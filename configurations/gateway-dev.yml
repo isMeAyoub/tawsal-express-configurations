@@ -5,7 +5,7 @@ spring:
     gateway:
       # this is for the routes to be configured in the gateway
       routes:
-        - id: parametre-service
+        - id: parametre
           uri: lb://PARAMETRE
           predicates:
             - Path=/api/v1/ville-ramassages/**
