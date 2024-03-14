@@ -8,7 +8,7 @@ spring:
         - id: parametre
           uri: lb://PARAMETRE
           predicates:
-            - Path=/api/v1/ville-ramassages/**
+            - Path=/api/v1/parametre/**
   # this is for certificate validation
   security:
     oauth2:
