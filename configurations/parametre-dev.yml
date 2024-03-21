@@ -53,3 +53,10 @@ info:
     name: parametre-service
     description: "This service is for the parametre management"
     version: 1.0.0
+# this is for logging
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
