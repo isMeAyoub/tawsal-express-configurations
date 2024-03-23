@@ -9,6 +9,10 @@ spring:
           uri: lb://PARAMETRE
           predicates:
             - Path=/api/v1/parametre/**
+        - id: media
+          uri: lb://MEDIA
+          predicates:
+            - Path=/api/v1/media/**
   # this is for certificate validation
   security:
     oauth2:
