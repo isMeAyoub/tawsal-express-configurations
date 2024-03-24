@@ -18,7 +18,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:7080/realms/master/protocol/openid-connect/certs
+          issuer-uri: http://localhost:7080/realms/tawsal-express-dev
 # this is for the actuator endpoints to be exposed
 management:
   endpoints:
