@@ -1,6 +1,8 @@
 server:
   port: 8089
 spring:
+  main:
+    allow-bean-definition-overriding: true
   cloud:
     gateway:
       # this is for the routes to be configured in the gateway
