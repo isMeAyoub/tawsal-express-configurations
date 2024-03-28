@@ -35,8 +35,7 @@ eureka:
 # this is for file upload
 file:
   storage:
-    path: "/Users/ayoub/Desktop/File Data"
-    # if windows :
+    path: "/Users/ayoub/Desktop/File Data/"
     # path: "C:\\Users\\SetupGame\\Desktop\\File Data\\"
 # this if for the actuator endpoints to be exposed
 management:
