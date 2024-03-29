@@ -13,6 +13,10 @@ spring:
           uri: lb://MEDIA
           predicates:
             - Path=/api/v1/media/**
+        - id: notification
+          uri: lb://NOTIFICATION
+          predicates:
+            - Path=/api/v1/notification/**
   # this is for certificate validation
   security:
     oauth2:
