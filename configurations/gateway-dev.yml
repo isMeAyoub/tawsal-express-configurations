@@ -17,6 +17,10 @@ spring:
           uri: lb://NOTIFICATION
           predicates:
             - Path=/api/v1/notification/**
+        - id: demande
+          uri: lb://DEMANDES
+          predicates:
+            - Path=/api/v1/demandes/**
   # this is for certificate validation
   security:
     oauth2:
