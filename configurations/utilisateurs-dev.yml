@@ -4,7 +4,7 @@ server:
 # this is for the database connection
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5222/utilisateurs-service
+    url: jdbc:postgresql://utilisateurs-db:5222/utilisateurs-service
     username: utilisateurs-service
     password: utilisateurs-service
   jpa:
